@@ -55,7 +55,13 @@
       extension: 125,
     },
   };
-  const colleagues = {
+
+  interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
+
+  const colleagues:ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
