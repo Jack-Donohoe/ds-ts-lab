@@ -44,3 +44,20 @@ export type BuddyList = {
   administrator: Administrator;
   members: Buddy[];
 };
+
+export type FriendPartial = Partial<Friend>
+// Type for gaining access to an event, e.g. concert
+export type EventPass = Omit<Colleague, "contact"> & {
+  passCode : number;
+}
+// Make person's properties immutable.
+export type SecureFriendContact = Readonly<Pick<Friend,"name" | "phone" > >
+
+export type Overlap = {
+  name: string;
+  age: number;
+  contact: {
+    email: string;
+    extension: number
+  }
+}
